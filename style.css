@@ -4,13 +4,13 @@
 	--------
 		Basic
 		Navigator
-		Home
+		Content
 		Other
 */
 
 /*-------------------------------*/
 
-/* Basic */
+/*************** Basic ***************/
 
 html, body {
 	height: 100%;
@@ -18,18 +18,19 @@ html, body {
 	margin: 0;
 }
 
-/* Navigator */
+/*************** Navigator ***************/
 
 nav {
   position: fixed;
   z-index: 1000; 
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   nav {
     top: 35px;
     left: 35px;
-    opacity: 2.0; 
+    opacity: 0.6;
+	transition: all .3s 
   }
   
   nav a {
@@ -49,9 +50,14 @@ nav {
 	background-size: contain;
 	background-repeat: no-repeat;
   }
+  
+  nav:hover {
+    opacity: 1.0;
+	transition: all .3s;
+  }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   nav {
 	top: 0px;
 	left: 0px;
@@ -84,7 +90,7 @@ nav a {
 	font-family: "Quicksand", Helvetica, sans-serif;
 	text-decoration: none;
 	font-weight: 400;
-	transition: all 0.5s;
+	transition: all .5s;
 	background-color: #000;
 	color: #fff; 
 }
@@ -94,15 +100,56 @@ nav a:hover, nav a:active {
   color: #000; 
 }
 
-/* Home */
+/*************** Content ***************/
 
-#outer {
-  height:200%;
-  width:100%;
-  position:relative;
+@media (max-width: 1200px) {
+	.content {
+	  width: 100%;
+	  height: 100%;
+	  margin: auto;
+	  text-align: center;
+	}
 }
 
-/* Other */
+@media (min-width: 1200px) {
+  .content {
+    width: calc(100%-400px);
+	height: 100%;
+	margin: auto;
+	text-align: center;
+  } 
+}
+
+section {
+  font-size: 18px;
+  background-color: #EAEAEA;
+  color: #444; 
+  height:100%;
+}
+
+@media (max-width: 1200px) {
+    section {
+      font-size: 21px;
+      line-height: 1.5em; 
+	}
+	
+    section .content {
+      padding: 50px 0; 
+	} 
+}
+
+#signature {
+	width:65%;
+	vertical-align:middle;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/*************** Other ***************/
 
 
 
