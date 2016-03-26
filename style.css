@@ -2,11 +2,21 @@
 /*
 	Contents
 	--------
+		Basic
 		Navigator
+		Home
 		Other
 */
 
 /*-------------------------------*/
+
+/* Basic */
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
 
 /* Navigator */
 
@@ -19,7 +29,7 @@ nav {
   nav {
     top: 35px;
     left: 35px;
-    opacity: 0.6; 
+    opacity: 2.0; 
   }
   
   nav a {
@@ -34,15 +44,11 @@ nav {
     background: none;
 	display: block;
 	width: 130px;
-	height: 130px;
+	height: 120px;
 	background-image: url("logos/vbo.png");
 	background-size: contain;
 	background-repeat: no-repeat;
   }
-  
-  nav:hover {
-	opacity: 1.0; 
-  } 
 }
 
 @media (max-width: 900px) {
@@ -88,8 +94,33 @@ nav a:hover, nav a:active {
   color: #000; 
 }
 
+/* Home */
+
+#outer {
+  height:200%;
+  width:100%;
+  position:relative;
+}
 
 /* Other */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
