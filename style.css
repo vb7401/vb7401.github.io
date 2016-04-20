@@ -6,6 +6,7 @@
 		Navigator
 		Content
 		Section
+			Home
 		Other
 */
 
@@ -30,7 +31,8 @@ nav {
   nav {
     top: 35px;
     left: 35px;
-	transition: all .3s 
+	transition: all .3s;
+	opacity: 0.5;
   }
   
   nav a {
@@ -52,6 +54,7 @@ nav {
   }
   
   nav:hover {
+	opacity: 1.0;
 	transition: all .3s;
   }
 }
@@ -125,8 +128,8 @@ section {
   height:100%;
 }
 
-  #home {
-  background-color: #A7DBD8;
+#home {
+  background-color:  #E0E4CC;
 } #blog {
   background-color:  #E0E4CC;
 } #projects {
@@ -162,6 +165,41 @@ section {
   top: 18px;
   left: 10px;
 }
+
+.bg {
+  min-width: 100%;
+  position: relative;
+  left: -40%;
+  z-index:0;
+}
+@media (min-width: 768px) {
+    .bg {
+      left: -10%; 
+	} 
+}
+@media (min-width: 992px) {
+    .bg {
+      left: 0; 
+	} 
+}
+@media (min-width: 1200px) {
+    .bg {
+      min-height: 100vh;
+	} 
+}
+	  
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%; 
+}
+
+/*************** Home ***************/
+
 
 /*************** Other ***************/
 
